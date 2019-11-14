@@ -8,6 +8,11 @@ class OrderItemsController < ApplicationController
     redirect_to products_path
   end
 
+  def destroy
+    current_cart.remove_item(kd: params[:id])
+    redirect_to cart_path
+  end
+
   #def create
    # @order = current_order
    # @item = @order.order_items.new(items_params)
@@ -18,16 +23,16 @@ class OrderItemsController < ApplicationController
 
   private
 
-  def items_params
-    params.require(:order_item).permit(:quantity, :product_id)
-    end
+ #def items_params
+    #params.require(:order_item).permit(:quantity, :product_id)
+    #end
 
-  def destroy
-    @order = current_order
-    @item = @order.order_items.find(params[:id])
-    @item.destroy
-    @order.save
-    redirect_to cart_path
-  end
+  #def destroy
+   # @order = current_order
+   # @item = @order.order_items.find(params[:id])
+   # @item.destroy
+   # @order.save
+   # redirect_to cart_path
+ # end
 
 end
