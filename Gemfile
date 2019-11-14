@@ -68,6 +68,9 @@ end
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11.1'
 gem 'bootstrap', '4.0.0.alpha6'
+gem 'simple_form'
+gem 'font-awesome-sass', '~> 5.11.2'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
