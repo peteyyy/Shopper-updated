@@ -36,7 +36,10 @@
               </li>
               </ul>
               <ul class="navbar-nav ml-auto">
-                <i class= <%= link_to pluralize(current_cart.items_count, "fas fa-shopping-cart"), cart_path %> </i>
+                <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
+                <i class= "fas fa-shopping-cart"> </i>
+
+
               </ul>
           </div>
       </nav>

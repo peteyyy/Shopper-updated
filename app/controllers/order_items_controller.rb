@@ -5,14 +5,16 @@ class OrderItemsController < ApplicationController
 
   def create
     current_cart.add_item(product_id: params[:product_id], quantity: params[:quantity])
-    redirect_to products_path
-  end
-
-  def destroy
-    current_cart.remove_item(kd: params[:id])
+    # redirect_to products_path
     redirect_to cart_path
   end
 
+  def destroy
+    current_cart.remove_item(id: params[:id])
+    redirect_to cart_path
+  end
+
+  #this is from website not video
   #def create
    # @order = current_order
    # @item = @order.order_items.new(items_params)

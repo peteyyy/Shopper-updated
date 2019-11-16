@@ -49,11 +49,17 @@
 
 <h2>
 Products </h2>
-  <% @products.each do |product| %>
-  <p><%= product.title %> | <% number_to_currency product.price %>)
-    <%= form_for @order_item do |f| %>
-      <%= f.hidden_field :product_id, value: product.id %>
-      <%= f.number_field :quantity, 1 %>
-      <%= f.submit "Add to Cart" %>
-  <% end %></p>
-<% end %>
+<!-- is this from video?  is it part of website instruction -->
+  <ul>
+  <% @product.each do |product| %>
+    <li> <%= product.title %>  </br> <%= product.description %> </br> <%= number_to_currency product.price %>
+    <!--  quantity and add to cart button needed -->
+        <%= form_tag order_items_path do %>
+          <%= hidden_field_tag :product_id, product.id %>
+          <%= number_field_tag :quantity, 1 %>
+          <%= submit_tag "Add to Cart" %>
+          <% end %>
+      </li>
+    <% end %>
+    </ul>
+ 
