@@ -6,6 +6,10 @@ class ShoppingCart
     @token = token
   end
 
+    def sub_total
+      product.price * product.quantity
+    end
+
   def order
     @order ||= Order.find_or_create_by(token: @token, status: 'cart') do |order|
       order.sub_total = 0

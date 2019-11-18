@@ -14,27 +14,4 @@ class OrderItemsController < ApplicationController
     redirect_to cart_path
   end
 
-  #this is from website not video
-  #def create
-   # @order = current_order
-   # @item = @order.order_items.new(items_params)
-   # @order.save
-   # session[:order_id] = @order.id 
-   # redirects_to products_path
- # end
-
-  private
-
- #def items_params
-    #params.require(:order_item).permit(:quantity, :product_id)
-    #end
-
-  #def destroy
-   # @order = current_order
-   # @item = @order.order_items.find(params[:id])
-   # @item.destroy
-   # @order.save
-   # redirect_to cart_path
- # end
-
 end
