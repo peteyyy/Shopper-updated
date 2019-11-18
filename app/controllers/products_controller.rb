@@ -8,9 +8,4 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
 
-#???  not part of video
-#  def index
-#    @product = Product.all
-#    @order_item = current_order.order_items.new
-#  end
 end

@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
   def create
     @order = current_cart.order
     if @order.update_attributes(order_params.merge(status: 'open'))
-      sesion[:cart_token] = nil
+      session[:cart_token] = nil
       redirect_to root_path
     else
       render :new
