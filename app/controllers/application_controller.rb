@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     def cart_token
       return @cart_token unless @cart_token.nil?
 
-      session[:cart_token] ||= SecureRandom.hex(0)
+      session[:cart_token] ||= SecureRandom.hex(5)
       @cart_token = session[:cart_token]
     end
   

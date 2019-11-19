@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_11_19_024018) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "cart"
+    t.integer "shopping_cart_id"
   end
 
   create_table "products", force: :cascade do |t|
