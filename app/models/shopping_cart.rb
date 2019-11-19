@@ -1,11 +1,12 @@
 class ShoppingCart < ApplicationRecord
-  has_many :orders
-  has_many :items, through: :orders
+  has_one :order
+  has_many :items, through: :order, class_name: 'OrderItem'
 
+  delegate :subtotal, to: :order
 
-    delegate :subtotal, to: :order
+  attr_accessor :token
   
-    def initialize(token:)
+    def initialize(token)
       @token = token
     end
   
