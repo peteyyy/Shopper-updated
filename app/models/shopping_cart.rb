@@ -7,13 +7,14 @@ class ShoppingCart < ApplicationRecord
   attr_accessor :token
   
     def initialize(token)
-      @token = token
+      super ()
+      @token = token.to_s
     end
-  
-      
+
     def order
       @order ||= Order.find_or_create_by(token: @token, status: 'cart') do |order|
         order.update_attribute(:subtotal, 0)
+      end
     end
   
     
@@ -52,4 +53,3 @@ class ShoppingCart < ApplicationRecord
 end
   
 
-end
