@@ -1,0 +1,155 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar {
+  margin: 0;
+}
+
+.title {
+  font-family: "Satisfy";
+  font-size: 60px;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 300;
+}
+
+.navbar {
+  background-color: rgb(75, 28, 3);
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 300;
+  box-shadow: 0px 1px 3px #4d545a;
+}
+
+.navbar-brand {
+  background: image_url('cf_logo.jpg');
+  text-align: center;
+  margin: 10px;
+
+}
+
+.body {}
+
+
+.fa-shopping-cart {
+  margin: 10px;
+}
+
+.col-sm-right {
+  align-content: right;
+}
+
+.hero {
+  background: image_url('feathersoft.jpg') no-repeat right center;
+  background-size: cover;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  margin-top: 0;
+  margin: auto;
+}
+
+.frosty {
+  background: rgba(247, 177, 72, 0.405);
+  color: rgb(56, 37, 5);
+  text-align: center;
+}
+
+.header {
+  content: image_url('horse.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 50%;
+  opacity: 0.85;
+  border-radius: 45px;
+  margin: 0 auto;
+  box-shadow: 5px 0px 10px grey;
+  padding: 0px;
+}
+
+.logo {
+  float: left;
+}
+
+.shopping-cart {
+  float: right;
+}
+
+.col-sm {
+  margin-bottom: 20px;
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+}
+
+.booyah-box h2,
+.booyah-box h1 {
+  margin: 10px;
+}
+
+flex-content-container {
+  flex: 1;
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(75, 28, 3);
+  color: white;
+  padding: 10px 0px;
+  margin-top: 30px;
+}
+
+
+table {
+  width: 70%;
+}
+
+.button1 {
+  font-size: 18px;
+  color: black;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+.button2 {
+  background-color: rgb(121, 199, 248);
+  padding: 10px 20px;
+}
+
+a:link,
+a:visited {
+  color: rgb(247, 221, 199);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  color: rgb(248, 198, 153);
+}

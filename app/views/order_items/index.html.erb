@@ -1,11 +1,14 @@
+</br>
 <h2>Current Cart</h2>
+</br>
 
 <table>
   <thead>
     <tr>
+    <!-- arrange these -->
       <td>Product</td>
       <td>Price</td>
-      <td>Quantity</td>
+      <!-- <td>Quantity</td> -->
       <td></td>
     </tr>
   </thead>
@@ -14,7 +17,7 @@
     <tr>
       <td><%= item.product.title %></td>
       <td><%= number_to_currency item.price %></td>
-      <td><%= item.quantity %></td>
+      <!-- <td><%= item.quantity %></td> -->
       <td> 
         <%= form_for item, method: :delete do |f| %>
         <%= f.submit "Remove" %>
@@ -33,4 +36,12 @@
   </tfoot>
 </table>
 
-<%= link_to "Checkout", checkout_path %>
+</br>
+</br>
+<div class="button1">
+<button type="button" class="btn btn-success">
+<%= link_to "Checkout", checkout_path %></button>
+</div>
+
+</br>
+</br>

@@ -12,7 +12,7 @@ class ShoppingCart < ApplicationRecord
     end
 
     def order
-      @order ||= Order.find_or_create_by(token: @token, status: 'cart') do |order|
+      @order ||= Order.find_or_create_by(token: @token, status: 'cart', first_name: 'test', last_name: 'test') do |order|
         order.update_attribute(:subtotal, 0)
       end
     end
@@ -21,20 +21,16 @@ class ShoppingCart < ApplicationRecord
     def items_count
       order.items.sum(:quantity)
     end
-  
-    def add_item(product_id:, quantity: 1)
+
+    def add_item(product_id, quantity)
       product = Product.find(product_id)
-  
-      order_item = order.items.find_or_create_by(product_id: product_id)
-  
-      order_item.price = product.price
-      order_item.quantity = quantity
-  
+      order_item = order.items.find_or_create_by(price: product.price, quantity: quantity)
       ActiveRecord::Base.transaction do 
         order_item.save
         update_subtotal!
       end
     end
+  
   
     def remove_items(id:)
       ActiveRecord::Base.transaction do 
