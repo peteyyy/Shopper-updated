@@ -72,6 +72,7 @@ gem 'simple_form'
 gem 'font-awesome-sass', '~> 5.11.2'
 gem 'stripe'
 gem "figaro"
+gem 'carrierwave', '~> 2.0'
 
 
 source 'https://rails-assets.org' do

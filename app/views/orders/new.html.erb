@@ -1,4 +1,6 @@
+</br>
 <h2> Checkout </h2>
+</br>
 
 <%= form_for @order, url: checkout_path do |f| %>
   <div class="form-group">
@@ -11,6 +13,7 @@
     <%= f.text_field :last_name %>
   </div>
 
-  <%= f.submit 'Checkout' %>
-
+<div class="button3">
+  <%= f.submit 'Continue to Purchase' %>
+</div>
 <% end %>
