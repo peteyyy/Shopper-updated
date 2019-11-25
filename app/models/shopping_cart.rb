@@ -1,7 +1,7 @@
 class ShoppingCart < ApplicationRecord
   has_one :order
   has_many :items, through: :order, class_name: 'OrderItem'
-  has_one :user
+  belongs_to :user
   delegate :subtotal, to: :order
 
   attr_accessor :token
