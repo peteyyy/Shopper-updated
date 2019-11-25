@@ -22,7 +22,7 @@ class ShoppingCart < ApplicationRecord
       order.items.sum(:quantity)
     end
 
-    def add_item(product_id, quantity)
+    def add_item(product_id, quantity=1)
       product = Product.find(product_id)
       order_item = order.items.find_or_create_by(price: product.price, quantity: quantity)
       ActiveRecord::Base.transaction do 
