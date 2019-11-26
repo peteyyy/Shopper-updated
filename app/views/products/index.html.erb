@@ -17,35 +17,34 @@
 
 
 <!--Product Cards   -->
- 
+
 <h2>
 Products </h2>
 </br>
-</br> 
+</br>
 <div class="container">
   <div class="row">
     <% @product.each do |product| %>
-    <div class="col-sm">
-      <div class="card" style="width: 18rem;">
-      <% if product.image_filename%>
-        <%= link_to image_tag (product.image_filename), product.image_filename %>
-        <% end %>
-        <!-- <img src="art_deco.png" class="card-img-top" alt="..."> -->
-        <div class="card-body">
-          <h5 class="card-title"><%= product.title %></h5>
-          <p class="card-text"><%= product.description %></br> <%= number_to_currency product.price %></p>
-          <%= form_tag order_items_path do %>
-          <%= hidden_field_tag :product_id, product.id %>
-          <!-- <%= number_field_tag :quantity, 1, size: 3 %> -->
-          <%= submit_tag "Add to Cart", class: "button2" %>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <% if product.image_filename%>
+            <%= link_to image_tag (product.image_filename), product.image_filename %>
           <% end %>
+            <!-- <img src="art_deco.png" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title"><%= product.title %></h5>
+            <p class="card-text"><%= product.description %></br> <%= number_to_currency product.price %></p>
+            <%= form_tag additem_path do %>
+              <%= hidden_field_tag :product_id, product.id %>
+              <%= number_field_tag :quantity, 1, size: 3 %>
+              <%= submit_tag "Add to Cart", class: "button2" %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div>
 </div>
 
 
-  
- 
+
