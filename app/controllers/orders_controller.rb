@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
       end
     end
     if !@order
-      return @order = Order.create(:order_params)
+      return @order = current_user.orders.create(status: "cart")
     end
   end
 
