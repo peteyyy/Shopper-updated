@@ -22,7 +22,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
          <!--  <div class="collapse navbar-collapse" id="navbarTogglerDemo02"> -->
-            <ul class="navbar-nav mr-auto mt-2 mt-md-0"> 
+            <ul class="navbar-nav mr-auto mt-2 mt-md-0">
               <li class="nav-item active">
                 <a class="nav-link" <%= link_to "Products", root_path %> <span class="sr-only">(current)</span></a>
                 <!-- additional products that can be added
@@ -45,10 +45,9 @@
                       <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
                     </li>
                   <% end %>
-              
+
               </ul>
               <ul class="navbar-nav ml-auto mt-2 mt-md-0">
-              <%= link_to pluralize(current_cart.items.count, 'item'), cart_path %>
                 <i class= "fas fa-shopping-cart"> </i>
               </ul>
           </div>
@@ -69,7 +68,7 @@
 </br>
 </br>
 
- 
+
 
     <div id="footer">
       <div class="container">
@@ -81,9 +80,8 @@
   </body>
 </html>
 
-  
-  
-  
-  
-  
-  
+
+
+
+
+
