@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
     product_id = params[:product_id]
     quantity = params[:quantity]
     product = Product.find(product_id)
-    order_item = current_order.items.find_or_create_by(product_id: product_id, quantity: quantity, order_id: current_order.id)
+    order_item = current_order.items.find_or_create_by(product: product, quantity: quantity, order_id: current_order.id)
     redirect_to cart_path
   end
 
