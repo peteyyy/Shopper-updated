@@ -16,9 +16,9 @@
     <% @items.each do |item| %>
     <tr>
       <td><%= item.product.title %></td>
-      <td><%= number_to_currency item.price %></td>
+      <td><%= number_to_currency item.product.price %></td>
       <!-- <td><%= item.quantity %></td> -->
-      <td> 
+      <td>
         <%= form_for item, method: :delete do |f| %>
         <%= f.submit "Remove" %>
         <% end %>
@@ -30,7 +30,6 @@
     <tfoot>
     <tr>
       <td colspan="4" align="right">
-        <%= number_to_currency current_cart.order.subtotal %>
       <td>
     </tr>
   </tfoot>
@@ -40,7 +39,6 @@
 </br>
 <div class="button1">
 <button type="button" class="btn btn-success">
-<%= link_to "Checkout", checkout_path %></button>
 </div>
 
 </br>
