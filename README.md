@@ -16,6 +16,7 @@ I pretty much put every single change in its own commit. Ill try to make this RE
 #### Changes:
 
 **Database / Migrations:**
+
 * Deleted both of the add_shopping_cart_id migrations.
 * Deleted the create_shopping_cart migration
 * Deleted add_user_id_to_shopping_cart migration
@@ -24,6 +25,7 @@ Remove the price, token, first_name and last_name columns from create_order_item
 * Added user_id to the create_orders migration
 
 **Models:**
+
 Order
 * Removed the belongs_to :shopping_cart
 * Added belongs_to :user
