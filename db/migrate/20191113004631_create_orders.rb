@@ -2,7 +2,6 @@ class CreateOrders < ActiveRecord::Migration[5.2]
   def change
     create_table :orders do |t|
       t.decimal :subtotal, precision: 15, scale: 2
-      t.string :token
       t.integer :user_id
 
       t.timestamps
